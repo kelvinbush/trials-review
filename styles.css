@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+#navbar {
+  height: 80px;
+  background-color: brown;
+  overflow: hidden;
+}
+
+.nav-links {
+  height: 100%;
+}
+
+.links {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  padding-right: 32px;
+  padding-top: 30px;
+}
+ul {
+  list-style: none;
+}
+.links li {
+  position: relative;
+  color: white;
+  text-align: center;
+  width: 73px;
+}
+/* .links li::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  height: 80px;
+  width: 50px;
+  display: none;
+
+  background-color: blue;
+} */
+li > a {
+  text-decoration: none;
+}
+.links li:hover,
+.links li::before {
+  background-color: cornflowerblue;
+  cursor: pointer;
+  display: block;
+}
+#project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  font-size: 28px;
+  background-color: #282c35;
+}
+#welcome-section > p {
+  color: brown;
+  font-size: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 40em) {
+  #project-tile {
+    flex-direction: row;
+  }
+
+  #project-tile > * {
+    flex-basis: 100%;
+    margin: 30px;
+  }
+}
